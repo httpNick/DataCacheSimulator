@@ -101,6 +101,8 @@ public class gui {
 
 		JPanel panel = new JPanel(new FlowLayout());
 		frame.getContentPane().add(panel, BorderLayout.SOUTH);
+		JPanel buttonPanel = new JPanel(new FlowLayout());
+		frame.getContentPane().add(buttonPanel, BorderLayout.NORTH);
 
 		JLabel lblNewLabel = new JLabel("L1 Size");
 		panel.add(lblNewLabel);
@@ -252,10 +254,7 @@ public class gui {
 
 			}
 		});
-		panel.add(load);
-		for (int i = 0; i < panel.getComponentCount(); i++) {
-			System.out.println(panel.getComponents()[i]);
-		}
+		buttonPanel.add(load);
 		JButton btnRunSimulation = new JButton("Run Simulation");
 		btnRunSimulation.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -426,7 +425,7 @@ public class gui {
 
 			}
 		});
-		panel.add(btnRunSimulation);
+		buttonPanel.add(btnRunSimulation);
 
 		JButton btnExitSimulation = new JButton("Exit");
 		btnExitSimulation.addActionListener(new ActionListener() {
